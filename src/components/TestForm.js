@@ -46,18 +46,18 @@ export default function TestForm(props) {
                 <h2>{props.formTitle}</h2>
                 <textarea className="form-control" value={text} onChange={handleOnChange} placeholder="Type your words.............." id="text" rows="8" style={{ backgroundColor: props.mode === "dark" ? "#010825" : "white", color: props.mode === "dark" ? "white" : "black" }}></textarea>
             </div>
-            <button className="btn btn-primary mx-1" onClick={handleUpOnClick}>Convert to Uppercase</button>
-            <button className="btn btn-primary mx-1" onClick={handleLwOnClick}>Convert to Lowercase</button>
-            <button className="btn btn-primary mx-1" onClick={handleExSpacesOnClick}>Remove Extra Spaces</button>
-            <button className="btn btn-primary mx-1" onClick={handleCopyOnClick}>Copy Text</button>
-            <button className="btn btn-danger mx-1" onClick={handleResetOnClick} >Reset</button>
+            <button className="btn btn-primary mx-1 my-1" onClick={handleUpOnClick}>Convert to Uppercase</button>
+            <button className="btn btn-primary mx-1 my-1" onClick={handleLwOnClick}>Convert to Lowercase</button>
+            <button className="btn btn-primary mx-1 my-1" onClick={handleExSpacesOnClick}>Remove Extra Spaces</button>
+            <button className="btn btn-primary mx-1 my-1" onClick={handleCopyOnClick}>Copy Text</button>
+            <button className="btn btn-danger mx-1 my-1" onClick={handleResetOnClick} >Reset</button>
             <div className='mt-3'>
                 <h4>Text summary:</h4>
-                <p> {text !== "" ? text.split(" ").length : 0} Words and {text.length} Characters</p>
+                <p> {text !== "" ? text.split(/\s+/).length : 0} Words and {text.length} Characters</p>
                 <p> {text !== "" ? (0.008 * text.split(" ").length).toFixed(3) : 0} Minutes to Read</p>
 
                 <h4>Preview:</h4>
-                <p>{text}</p>
+                <p>{text !== "" ?text:"Nothing to preview."}</p>
             </div>
         </>
     )

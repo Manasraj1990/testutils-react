@@ -38,7 +38,7 @@ function App() {
     })
     setTimeout(() => {
       setAlert(null)
-    }, 1000);
+    }, 3000);
   }
 
   return (
@@ -47,10 +47,7 @@ function App() {
         <Navbar title="TextUtils" aboutUsText="About Us" mode={mode} modeBtnText={modeBtnText} handleSwitch={handleSwitch} />
         <Alert alert={alert} />
         <Routes>
-          <Route path="/" element={<div className="container mt-4"><TestForm formTitle="Enter Your Text" mode={mode} showAlert={showAlert} /> </div>}/>
-            {/*  */}
-              
-            {/* </div> */}
+          <Route path="/" element={<div className="container mt-4"><TestForm formTitle="Try Testutils | Analyse your text" mode={mode} showAlert={showAlert} /> </div>}/>
           <Route path="/about"  element={<About />} />
             
         </Routes>
