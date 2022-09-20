@@ -21,13 +21,13 @@ function App() {
       setModeBtnText('Night mode off')
       document.body.style.backgroundColor = "#010825"
       document.body.style.color = "white"
-      showAlert("Dark mode enabled", "success");
+      showAlert("Night mode on", "success");
     } else {
       setMode('light');
       setModeBtnText('Night mode on')
       document.body.style.backgroundColor = "white"
       document.body.style.color = "#010825"
-      showAlert("Light mode enabled", "success");
+      showAlert("Night mode off", "danger");
     }
   }
 
